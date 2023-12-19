@@ -1,14 +1,25 @@
 // import express
 const express = require("express")
 
+//import drinks array (database)
+const drinks = require("./models/drinks.js")
+
 // create express app object
 const app= express()
 
+
+//**************
 // ROUTES
+//**************
 
 // GET request to "/"
 app.get("/", (req, res) => {
     res.send('Welcome to the Gitpub App!')
+})
+
+// get route /drinks
+app.get("/drinks", (req, res) => {
+    res.send(drinks)
 })
 
 
