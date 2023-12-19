@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
 // get route /drinks
 app.get("/drinks", (req, res) => {
-    res.send(drinks)
+    res.render("index.ejs", {drinks})
 })
 
 
