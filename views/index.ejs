@@ -14,8 +14,8 @@
 
         <!-- capitalizing first letter of each name -->
         <% let drinkName = drinks[i].name  %>
-        <% //getting first character using charAt(0) and converting it to uppercase, then concatenating rest of the string using slice(1). slice(1) gives the string from second character to last char %>
-        <% drinkName = drinkName.charAt(0).toUpperCase() + drinkName.slice(1) %>
+        <% //getting first character using index 0 and converting it to uppercase, then concatenating rest of the string using slice(1). slice(1) gives the string from second character to last char %>
+        <% drinkName = drinkName[0].toUpperCase() + drinkName.slice(1) %>
 
        <a href="/drinks/<%= i %>"> <li><%= drinkName %></li> </a>
     <% } %>
