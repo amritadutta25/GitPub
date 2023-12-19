@@ -23,6 +23,11 @@ app.get("/drinks", (req, res) => {
     res.render("index.ejs", {drinks})
 })
 
+// SHOW ROUTE
+app.get("/drinks/:id", (req, res) => {
+    res.send(req.params.id)
+})
+
 
 
 
