@@ -17,15 +17,15 @@
         <% //getting first character using charAt(0) and converting it to uppercase, then concatenating rest of the string using slice(1). slice(1) gives the string from second character to last char %>
         <% drinkName = drinkName.charAt(0).toUpperCase() + drinkName.slice(1) %>
 
-        <li><%= drinkName %></li>
+       <a href="/drinks/<%= i %>"> <li><%= drinkName %></li> </a>
     <% } %>
     </ul>
 
 
     <style>
         body {
-            background-color: rgb(70, 79, 180);
-            color: rgb(248, 205, 255);
+            background-color: rgb(228, 176, 227);
+            color: rgb(15, 88, 16);
         }
     </style>
     
