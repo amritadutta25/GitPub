@@ -10,7 +10,7 @@
 
     <a href="/drinks">Back to Index</a>
 
-    <h2><%= drink.name %></h2>
+    <h2><%= drink.name[0].toUpperCase() + drink.name.slice(1) %></h2>
 
     <!-- adding ".png" because image links in drinks.js doesn't end with .png -->
     <img src="<%= drink.image + ".png" %>" alt="Drink image">
