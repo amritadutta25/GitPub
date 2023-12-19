@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitPub</title>
+</head>
+<body>
+    <h1>At foo bar</h1>
+
+    <a href="/drinks">Back to Index</a>
+
+    <h2><%= drink.name %></h2>
+
+    <!-- adding ".png" because image links in drinks.js doesn't end with .png -->
+    <img src="<%= drink.image + ".png" %>" alt="Drink image">
+    <h3><%= drink.price %></h3>
+
+    <style>
+        body {
+            background-color: rgb(228, 176, 227);
+            color: rgb(15, 88, 16);
+        }
+    </style>
+    
+</body>
+</html>

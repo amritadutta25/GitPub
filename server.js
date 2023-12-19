@@ -25,7 +25,12 @@ app.get("/drinks", (req, res) => {
 
 // SHOW ROUTE
 app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id)
+
+    // getting the drink using the id from url params
+    const id = req.params.id
+    const drink = drinks[id]
+    
+    res.render("show.ejs", {drink})
 })
 
 
