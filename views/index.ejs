@@ -8,10 +8,24 @@
 <body>
     <h1>Welcome to gitPub</h1>
 
+    <ul>
+    <!-- rendering drinks as a list -->
+    <% for (let i=0; i<drinks.length; i++) { %>
+
+        <!-- capitalizing first letter of each name -->
+        <% let drinkName = drinks[i].name  %>
+        <% //getting first character using charAt(0) and converting it to uppercase, then concatenating rest of the string using slice(1). slice(1) gives the string from second character to last char %>
+        <% drinkName = drinkName.charAt(0).toUpperCase() + drinkName.slice(1) %>
+
+        <li><%= drinkName %></li>
+    <% } %>
+    </ul>
+
+
     <style>
         body {
             background-color: rgb(70, 79, 180);
-            color: rgb(205, 255, 251);
+            color: rgb(248, 205, 255);
         }
     </style>
     

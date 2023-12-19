@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
     res.send('Welcome to the Gitpub App!')
 })
 
+// INDEX ROUTE
 // get route /drinks
 app.get("/drinks", (req, res) => {
     res.render("index.ejs", {drinks})
