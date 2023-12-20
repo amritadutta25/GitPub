@@ -6,20 +6,57 @@
     <title>GitPub</title>
 </head>
 <body>
-    <h1>At foo bar</h1>
+    <h1>AT FOO BAR</h1>
 
     <a href="/drinks">Back to Index</a>
 
-    <h2><%= drink.name[0].toUpperCase() + drink.name.slice(1) %></h2>
+    <div class="drink">
+        <!-- adding ".png" because image links in drinks.js doesn't end with .png -->
+        <img src="<%= drink.image + ".png" %>" alt="Drink image">
 
-    <!-- adding ".png" because image links in drinks.js doesn't end with .png -->
-    <img src="<%= drink.image + ".png" %>" alt="Drink image">
-    <h3><%= drink.price %></h3>
+        <div class="info">
+            <h2><%= drink.name[0].toUpperCase() + drink.name.slice(1) %></h2>
+            <h3><%= `$` + drink.price %></h3>
+        </div>
+    </div>
 
     <style>
         body {
             background-color: rgb(228, 176, 227);
             color: rgb(15, 88, 16);
+            text-align: center;
+            font-family: fantasy;
+        }
+        .drink {
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        img {
+            position: relative;
+            display: inline-block;
+        }
+        /* .drink .hover-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .drink:hover .hover-text {
+            opacity: 1;
+        } */
+        .info {
+            display: block;
+            margin-left: 20px;
+            padding-top: 15%;
         }
     </style>
     
